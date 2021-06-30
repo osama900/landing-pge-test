@@ -1,2 +1,3 @@
 # landing-pge-test
-practicing html css
+
+practicing html css with some javascript code
