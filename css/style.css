@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(238, 122, 45);
+}
+
+#linkToInspieredBy a {
+  text-decoration: none;
+}
+
+#footerF {
+  margin: 20px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+#batmanImg {
+  position: absolute;
+  height: 100px;
+  top: 90px;
+  left: 90px;
+  transform: rotate(30deg);
+
+  animation: vibrate-1 13s linear infinite backwards;
+}
+
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-10px, 10px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(15px, -15px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
