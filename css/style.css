@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
+  cursor: url("img/cur.png");
 }
 body {
-  background-color: rgb(238, 122, 45);
+  background-color: rgb(201, 179, 57);
+  overflow-x: hidden;
 }
 
 #linkToInspieredBy a {
@@ -20,28 +22,214 @@ body {
   height: 100px;
   top: 90px;
   left: 90px;
-  transform: rotate(30deg);
 
-  animation: vibrate-1 13s linear infinite backwards;
+  animation: vibrate-1 10s linear infinite backwards;
+}
+
+#starImg {
+  position: absolute;
+  height: 30px;
+  top: 190px;
+  right: 100px;
+  animation: myAnim 8s ease 0s infinite alternate-reverse backwards;
+}
+#osamaImg {
+  transform: rotate(30deg);
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  height: 160px;
+  animation: osAnim 7s ease 0s infinite alternate-reverse backwards;
+}
+
+#teslaImg {
+  height: 200px;
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  animation: tesla 10s ease-in-out 2s infinite alternate-reverse backwards;
+}
+#maklobehImg {
+  height: 180px;
+  position: absolute;
+  bottom: 80px;
+  left: 120px;
+  animation: mk 15s ease-in-out 5s infinite alternate-reverse backwards;
+}
+#whoImg {
+  height: 100px;
+  position: absolute;
+  bottom: 200px;
+  right: 400px;
+}
+.txtHover:hover {
+  border: solid 2px rgb(29, 28, 28);
+  border-radius: 20px;
+}
+#mashImg {
+  height: 100px;
+  position: absolute;
+  bottom: 180px;
+  right: 600px;
+}
+#twasalImg {
+  height: 100px;
+  position: absolute;
+  bottom: 160px;
+  right: 800px;
+}
+#sunImg {
+  height: 50px;
+  position: absolute;
+  top: 40px;
+  right: 500px;
+  animation: sun 17s linear 0s infinite normal forwards;
+}
+#solarImg {
+  right: 300px;
+  position: absolute;
+  height: 200px;
+  top: 10px;
+}
+#camImg {
+  height: 60px;
+  position: absolute;
+  top: 70px;
+  left: 500px;
+}
+#appImg {
+  height: 250px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+
+@keyframes sun {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mk {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@keyframes tesla {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes osAnim {
+  0% {
+    transform: scale(0.9) rotate(5deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(-5deg);
+  }
 }
 
 @keyframes vibrate-1 {
   0% {
-    transform: translate(0);
+    transform: translate(0) rotate(5deg);
   }
   20% {
-    transform: translate(-10px, 10px);
+    transform: translate(-10px, 10px) rotate(7deg);
   }
   40% {
-    transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px) rotate(12deg);
   }
   60% {
-    transform: translate(2px, 2px);
+    transform: translate(2px, 2px) rotate(15deg);
   }
   80% {
-    transform: translate(15px, -15px);
+    transform: translate(15px, -15px) rotate(7deg);
   }
   100% {
-    transform: translate(0);
+    transform: translate(0) rotate(5deg);
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0.9;
+    transform: translateY(-45px) rotate(30deg);
+  }
+
+  24% {
+    opacity: 0.9;
+  }
+
+  40% {
+    opacity: 0.3;
+    animation-timing-function: ease-in;
+    transform: translateY(-24px) rotate(30deg);
+  }
+
+  65% {
+    opacity: 0.4;
+    animation-timing-function: ease-in;
+    transform: translateY(-12px) rotate(-30deg);
+  }
+
+  82% {
+    opacity: 0.6;
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    opacity: 0.8;
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    opacity: 0.9;
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 0.9;
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
